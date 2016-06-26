@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>Intersections of Tech</title>
+        <title>Keep your codebase as cool as a Cucumber</title>
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
         <link rel="stylesheet" href="css/reveal.css">
@@ -29,7 +29,7 @@
             <div class="slides">
                 <!-- Slide 1 -->
                 <section>
-                    <h1>Keep your codebase as cool as a Cucumber</h1>
+                    <h1>Keeping your codebase as cool as a Cucumber</h1>
                     <hr>
                     <h3>Tanya Powell /
                         <a href="https://twitter.com/tanya_powell">@tanya_powell</a>
@@ -62,16 +62,172 @@
                 <!-- End of Slide 2 -->
 
                 <!-- Slide 3 -->
-                <h2>Why use BDD?</h2>
-                <ul>
-                  <li>It's simple and can improve team communication</li>
-                  <li></li>
-                </ul>
+                <section>
+                  <h2>What is Behaviour Driven Development (BDD)?</h2>
+                  <img src="http://itsadeliverything.com/wordpress/images//rachel-davies-bdd-in-a-nutshell.jpg" alt="BDD in Nutshell" />
+                  <small>(Photo Credit: <a href="http://itsadeliverything.com/">It's a Delivery Thing</a>)</small>
+
+                  <aside class="notes">
+                    <ul>
+                      <li>Behaviour Driven Development is a software methodology in which an application is specified and designed by describing how its behaviour should appear to an outside observer.</li>
+                      <li>Simply put, it's a methodolgy that ensures a product is built the way the domain expert expects it to behave</li>
+                    </ul>
+                  </aside>
+                </section>
+
+                <section>
+                  <h2>U w0t Mate</h2>
+                  <ul>
+                    <li class="fragment fade-in">Imagine we are making a simple calculator that only adds <strong>two</strong> small numbers together</li>
+                    <li class="fragment fade-in">We can assume that we display: <strong><code>2 + 2 = 4</code></strong></li>
+                    <li class="fragment fade-in">Actually our domain expert expected our calculator to display: <strong><code>2 + 2 = FOUR</code></strong></li>
+                  </ul>
+
+                  <aside class="notes">
+                    <ul>
+                      <li>I'll give you an example. Our domain expert has asked us to build a basic calculator that adds two numbers together</li>
+                      <li>That's simple enough that we, as developers, can make some basic assumptions. So let's assume when entering 2 + 2 we want to see it as 2 + 2 = 4 as all integers</li>
+                      <li>But what if our domain expert expected to see 2 + 2 = FOUR, so an integer + an integer returns a string</li>
+                    </ul>
+                  </aside>
+                </section>
+
+                <section>
+                  <table border="1" style="width:100%">
+                    <thead>
+                      <td>Our Assumption Implemented</td>
+                      <td>The Expectation Implemented</td>
+                    </thead>
+                    <tr>
+                      <td>
+                        <img src="img/assumption.jpg" alt="" />
+                        <small>When we print out <code><strong>addTwoNumbers(2, 2)</strong></code> we will be returned <code><strong>4</strong></code></small>
+                      </td>
+                      <td>
+                        <img src="img/expected.jpg" alt="" />
+                        <small>Our answer will now be returned as <code><strong>FOUR</strong></code></small>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <aside class="notes">
+                    <ul>
+                      <li>Just a little sidebar - I come from a strongly typed background and first learned to code by learning the granddaddy of Object Orientated Languages C++, so this for this example I'm explicitly declaring my data types to help all of us understand my point</li>
+                    </ul>
+
+                  </aside>
+                </section>
                 <!-- End of Slide 3 -->
+
+                <!-- Slide 4 -->
+                <section>
+                  <h2>BDD vs TDD</h2>
+                  <table border="1 solid" style="width:100%">
+                    <thead>
+                      <td>Behaviour Driven Development (BDD)</td>
+                      <td>Test Driven Development (TDD)</td>
+                    </thead>
+                    <tr>
+                      <td>
+                        <small>
+                          Bacon ipsum dolor amet picanha strip steak cow swine pork chop porchetta fatback. Spare ribs pork turkey andouille. Cupim pork loin meatball, shoulder beef pork chop brisket flank chuck.
+                        </small>
+                      </td>
+                      <td>
+                        <small>
+                          Bacon ipsum dolor amet picanha strip steak cow swine pork chop porchetta fatback. Spare ribs pork turkey andouille. Cupim pork loin meatball, shoulder beef pork chop brisket flank chuck.
+                        </small>
+                      </td>
+                    </tr>
+                  </table>
+                  <aside class="notes">
+
+                  </aside>
+                </section>
+                <!-- End of Slide 4 -->
+
+                <!-- Slide 5 -->
+                <section>
+                  <h2>Why use BDD?</h2>
+                  <ul>
+                    <li>It's simple and can improve team communication</li>
+                    <li>The developer will know what to build</li>
+                    <li>The tester will know what to test</li>
+                    <li>The domain expert knows what bahaviour to expect</li>
+                  </ul>
+
+                  <aside class="notes">
+
+                  </aside>
+                </section>
+                <!-- End of Slide 5 -->
+
+                <section>
+                  <h2>How to use BDD?</h2>
+                  <img class="custom-img" src="https://cucumber.io/images/cucumber-logo.svg" alt="Cucumber Logo" />
+                  <p>
+                    Can be used with:
+                  </p>
+                  <table border="1" style="width:100%">
+                    <tr>
+                      <td>Ruby</td>
+                      <td>Java</td>
+                      <td>Python</td>
+                      <td>Javascript</td>
+                    </tr>
+                    <tr>
+                      <td>Clojure</td>
+                      <td>.NET</td>
+                      <td>PHP</td>
+                      <td>C++</td>
+                    </tr>
+                  </table>
+
+                  <aside class="notes">
+                    <ul>
+                      <li>There are many different BDD frameworks available, but my framework of choice of Cucumber</li>
+                      <li>It came be used with all these languages and a few more</li>
+                      <li>With Cucumber you can write a user story, step definitions and a world for the steps to run in</li>
+                    </ul>
+                  </aside>
+                </section>
+
+                <section>
+                  <h2>Gherkin</h2>
+                  <img width="30%" height="30%" src="https://img1.etsystatic.com/134/1/6019406/il_570xN.874901107_qqhg.jpg" alt="Gherkin" />
+                  <ul>
+                    <li>Cucumber's Domain Specific Language that allows you to describe the expected behaviour</li>
+                    <li>It's two purposes are documentation and automated tests</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2>Gherkin Keywords</h2>
+                  <table border="1" style="width:100%">
+                    <tr>
+                      <td>Feature</td>
+                      <td>Background</td>
+                      <td>Scenario</td>
+                      <td>Given</td>
+                    </tr>
+                    <tr>
+                      <td>When</td>
+                      <td>Then</td>
+                      <td>And</td>
+                      <td>But</td>
+                    </tr>
+                    <tr>
+                      <td>*</td>
+                      <td>Scenario Outline</td>
+                      <td>Examples</td>
+                    </tr>
+                  </table>
+                </section>
 
                 <section>
                     <img src="img/questions.jpg" alt=""/>
                 </section>
+
 
                 <section>
                     <h2>Thanks for listening
@@ -107,6 +263,7 @@
                     }
                 ]
             });
+            Reveal.configure({ slideNumber: true });
         </script>
     </body>
 </html>
